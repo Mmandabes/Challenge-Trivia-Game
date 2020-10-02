@@ -1,0 +1,255 @@
+:root {
+  background-color: #ecf5ff;
+  font-size: 62.5%;
+  --clr-accent: #043765;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+:focus {
+  outline:unset;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 5rem;
+  color: var(--clr-accent);
+  margin: 5rem 0;
+  text-transform: capitalize;
+}
+
+
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+/* UTILITIES */
+
+.container {
+  background-color: rgba(255, 255, 255, .15);  
+ backdrop-filter: blur(5px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #00000078;
+  border-radius: 1rem;
+}
+
+
+.container > * {
+  width: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+#home{
+  margin-bottom: 50%;
+}
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BUTTONS */
+.btn {
+  font-size: 2.5rem;
+  padding: 2rem;
+  width: 25rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: #FFF;
+  border-radius: 1rem;
+  background-color: rgb(36, 35, 35);
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
+  box-shadow: 0.9rem 0.8rem 0.4rem 0 rgba(26, 27, 27, 0.7);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.fas{
+  color: rgb(255 255 255);
+  margin-left: 1rem;
+}
+.medium {
+  color: #40d8ca;
+}
+.hard {
+  color: #e65858;
+}
+.fa-crown{
+  color: rgb(236 211 32); 
+}
+
+
+
+/* FORMS */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* App Look */
+.smartphone {
+  height: calc(100vh - 2rem);
+  min-height: fit-content;
+  width: calc((9/19.5)*(100vh - 2rem));
+  min-width: min-content;
+  position: relative;
+  margin: 1rem auto;
+  border: 1rem black solid;
+  border-radius: 6.7rem;
+  -moz-border-radius: 1.7rem;
+   -webkit-border-radius: 1.7rem;
+}
+@media( max-height: 650px) {
+  .smartphone {
+    min-height: max-content;
+    max-width: 100vw;
+    width: calc((19.5/9)*(100vh - 2rem));
+  }
+  #home {
+    display:grid;
+    grid-template-rows: 10rem 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5rem;
+  }
+  h1{
+    grid-column: span 2;
+  }
+  a.btn{
+    justify-self: center;
+  }
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 6rem;
+  height: .3rem;
+  position: absolute;
+  top: -.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 1rem;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: .9rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(0, 0, 0);
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.smartphone a.hide {
+  position: absolute;
+  left: 50%;
+  z-index:2;
+}
+
+
+svg {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  right: 0;
+  bottom: 0rem;
+  margin: auto;
+  width: 10rem;
+  height:10rem;
+  z-index:1;
+}
+
+/* The circle on the bottom of the device */
+.smartphone a.hide:after {
+  content: '';
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  left: 50%;
+  bottom: -1.5rem;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+  pointer-events: all;
+}
