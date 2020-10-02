@@ -159,15 +159,11 @@ input::placeholder {
 /* App Look */
 .smartphone {
   height: calc(100vh - 2rem);
-  min-height: fit-content;
+  min-height: max-content;
   width: calc((9/19.5)*(100vh - 2rem));
-  min-width: min-content;
+  min-width: fit-content;
   position: relative;
   margin: 1rem auto;
-  border: 1rem black solid;
-  border-radius: 6.7rem;
-  -moz-border-radius: 1.7rem;
-   -webkit-border-radius: 1.7rem;
 }
 
 .smartphone:before {
