@@ -191,7 +191,6 @@ input::placeholder {
   }
 }
 
-/* The horizontal line on the top of the device */
 .smartphone:before {
   content: '';
   display: block;
@@ -204,8 +203,6 @@ input::placeholder {
   background: #333;
   border-radius: 1rem;
 }
-
-/* The circle on the bottom of the device */
 .smartphone:after {
   content: '';
   display: block;
@@ -226,20 +223,6 @@ input::placeholder {
   z-index:2;
 }
 
-
-svg {
-  position: absolute;
-  top: 75%;
-  left: 0;
-  right: 0;
-  bottom: 0rem;
-  margin: auto;
-  width: 10rem;
-  height:10rem;
-  z-index:1;
-}
-
-/* The circle on the bottom of the device */
 .smartphone a.hide:after {
   content: '';
   display: block;
