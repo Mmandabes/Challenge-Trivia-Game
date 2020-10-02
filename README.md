@@ -5,7 +5,7 @@ User scores are stored in localstorage and displayed with the diffuculty mode in
 This code is free to use.
 This is a chellenge from my coding bootcamp please leave suggestion and/or requests. Thank you!
 <br />
-<a href="https://mmandabes.github.io/Challenge-Trivia-Game/" alt="demo link" style="font-size:2rem;">Demo</a><br />
+<font size="+1"><a href="https://mmandabes.github.io/Challenge-Trivia-Game/" alt="demo link">Demo</a><br /></font>
 
 <img src="imgs/Challenge-Trivia-Game-1600.png" alt="home screen representation">
 <img src="imgs/Challenge-Trivia-Game-game-html-1601.png" alt="Game in easy mode">
